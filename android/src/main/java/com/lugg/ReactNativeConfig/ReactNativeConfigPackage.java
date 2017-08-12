@@ -11,6 +11,10 @@ import java.util.Collections;
 import java.util.List;
 
 public class ReactNativeConfigPackage implements ReactPackage {
+    public List<Class<? extends JavaScriptModule>> createJSModules() {
+        return Collections.emptyList();
+    }
+
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         return Arrays.<NativeModule>asList(
